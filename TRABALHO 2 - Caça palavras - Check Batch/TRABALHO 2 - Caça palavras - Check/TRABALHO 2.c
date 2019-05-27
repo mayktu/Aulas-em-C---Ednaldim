@@ -7,10 +7,10 @@
 #define NUML 20
 
 void imprime_matrix(char mtx[][NUMC],int armazenar_linha,int armazenar_coluna);									//PROTOTIPO DO PROCEDIMENTO DE ESCREVER MATRIZES NA TELA
-int busca_situa(char mtx[][NUMC],int n,char palavras[][NUMC],FILE *resultados, int armazenar_qt_pal,int armazenar_linha, int armazenar_coluna);									//PROTOTIPO DA FUN«√O DE BUSCAR E MOSTRAR SE A PALAVRA ESTA NA MATRIZ
+int busca_situa(char mtx[][NUMC],int n,char palavras[][NUMC],FILE *resultados, int armazenar_qt_pal,int armazenar_linha, int armazenar_coluna);									//PROTOTIPO DA FUN√á√ÉO DE BUSCAR E MOSTRAR SE A PALAVRA ESTA NA MATRIZ
 																		
 																		
-//FUN«√O PRINCIPAL MAIN
+//FUN√á√ÉO PRINCIPAL MAIN
 
 int main(int argc, char *argv[])		
 {
@@ -55,13 +55,13 @@ int main(int argc, char *argv[])
 				
 	armazenar_qt_pal=i;				
 				
-	setlocale(LC_ALL,"");														//FUN«√O DA BIBLIOTECA LOCALE PARA CORRIGIR OS ACENTOS NO  PROGRAMA.			
+	setlocale(LC_ALL,"");														//FUN√á√ÉO DA BIBLIOTECA LOCALE PARA CORRIGIR OS ACENTOS NO  PROGRAMA.			
 						
-	imprime_matrix(mtx,armazenar_linha,armazenar_coluna);														//CHAMADA DA FUN«√O PARA IMPRIMIR A MATRIZ MTX NA TELA.
+	imprime_matrix(mtx,armazenar_linha,armazenar_coluna);														//CHAMADA DA FUN√á√ÉO PARA IMPRIMIR A MATRIZ MTX NA TELA.
 
-	n=50;																		//MODIFICA«√O FEITA PARA ENTRADA DAS PALAVRAS PELO CODIGO.
+	n=50;																		//MODIFICA√á√ÉO FEITA PARA ENTRADA DAS PALAVRAS PELO CODIGO.
 		
-	busca_situa(mtx,n,palavras,resultados,armazenar_qt_pal,armazenar_linha,armazenar_coluna);															//CHAMADA DA FUN«√O PARA ENTRADA DAS PALAVRAS QUE SER√O BUSCADAS, BUSCAR ELAS E APRESENTAR SITUA«√O.
+	busca_situa(mtx,n,palavras,resultados,armazenar_qt_pal,armazenar_linha,armazenar_coluna);															//CHAMADA DA FUN√á√ÉO PARA ENTRADA DAS PALAVRAS QUE SER√ÉO BUSCADAS, BUSCAR ELAS E APRESENTAR SITUA√á√ÉO.
 	
 	return 0;
 }
@@ -82,11 +82,11 @@ void imprime_matrix(char mtx[][NUMC],int armazenar_linha,int armazenar_coluna)
 }	
 
 	
-/*A FUN«√O A SEGUIR ELA IRA DAR ENTRADA NOS DADOS QUE SER√O BUSCADOS, DEPOIS IR¡ APRESENTAR A SITUA«√O DAS PALAVRAS, SE ELAS SE ENCONTRAM OU N√O 
-NO CA«A PALAVRAS*/
+/*A FUN√á√ÉO A SEGUIR ELA IRA DAR ENTRADA NOS DADOS QUE SER√ÉO BUSCADOS, DEPOIS IR√Å APRESENTAR A SITUA√á√ÉO DAS PALAVRAS, SE ELAS SE ENCONTRAM OU N√ÉO 
+NO CA√áA PALAVRAS*/
 int busca_situa(char mtx[][NUMC],int n,char palavras[][NUMC],FILE *resultados, int armazenar_qt_pal,int armazenar_linha, int armazenar_coluna){
 	
-	int i,j,k,l,a,b,c,tamanho,u,gatilho=0;								//DECLARA«√O DE VARIAVEIS LOCAIS
+	int i,j,k,l,a,b,c,tamanho,u,gatilho=0;								//DECLARA√á√ÉO DE VARIAVEIS LOCAIS
 	char sim[]=" SIM\n",nao[]=" NAO\n";
 	
 	
@@ -94,24 +94,24 @@ int busca_situa(char mtx[][NUMC],int n,char palavras[][NUMC],FILE *resultados, i
 	for(i=0;i<=armazenar_qt_pal;i++){
 	printf("%s\n",palavras[i]);}
 		
-	//ENTRADA DAS PALAVRAS PELO CODIGO, MANUTEN«√O FEITA NO PROGRAMA PARA O TRABALHO T2
+	//ENTRADA DAS PALAVRAS PELO CODIGO, MANUTEN√á√ÉO FEITA NO PROGRAMA PARA O TRABALHO T2
 	fprintf(resultados,"\n");
-	for(k=0;k<armazenar_qt_pal;k++){										//TRANSI«√O DE PALAVRAS NA ARRAY DE STRINGS.
+	for(k=0;k<armazenar_qt_pal;k++){										//TRANSI√á√ÉO DE PALAVRAS NA ARRAY DE STRINGS.
 	
 		u=0;												//SENTINELA PARA VER SE A PALAVRA FOI ENCONTRADA.
 		
-		for(i=0;i<armazenar_linha;i++){ 									//TRANSI«√O DE LINHAS
-			for(j=0;j<armazenar_coluna;j++){ 									//TRANSI«√O DE COLUNAS
+		for(i=0;i<armazenar_linha;i++){ 									//TRANSI√á√ÉO DE LINHAS
+			for(j=0;j<armazenar_coluna;j++){ 									//TRANSI√á√ÉO DE COLUNAS
 		
-				if (mtx[i][j]==palavras[k][0]){ 				//VERIFICANDO SE A PRIMEIRA LETRA DA PALAVRA CONDIZ COM A POSI«√O VERIFICADA DE MTX.
+				if (mtx[i][j]==palavras[k][0]){ 				//VERIFICANDO SE A PRIMEIRA LETRA DA PALAVRA CONDIZ COM A POSI√á√ÉO VERIFICADA DE MTX.
 				
 				tamanho=strlen(palavras[k]);  				 //TAMANHO DA PALAVRA QUE ESTAMOS BUSCANDO.
 							
 				if ((tamanho+j)<=armazenar_coluna){	  					 // VERIFICANDO SE A PALAVRA CABE NA LINHA
 				
-						c=0;								 //CONTADOR PARA COMPARAR TAMANHO DA VERIFICA«¬O COM A PALAVRA BUSCADA
+						c=0;								 //CONTADOR PARA COMPARAR TAMANHO DA VERIFICA√á√ÇO COM A PALAVRA BUSCADA
 						
-						for(l=0,a=j;l<tamanho;l++,a++){ 	//LA«O PARA VERIFICAR SE A PALAVRA ESTA NA LINHA
+						for(l=0,a=j;l<tamanho;l++,a++){ 	//LA√áO PARA VERIFICAR SE A PALAVRA ESTA NA LINHA
 					
 							if (mtx[i][a]==palavras[k][l]){
 								c++;}
@@ -123,9 +123,9 @@ int busca_situa(char mtx[][NUMC],int n,char palavras[][NUMC],FILE *resultados, i
 					
 				if ((tamanho+i)<=armazenar_linha && u==0){ 				//VERIFICANDO SE A PALAVRA CABE NA COLUNA
 							
-						c=0;								//CONTADOR PARA COMPARAR TAMANHO DA VERIFICA«¬O COM A PALAVRA BUSCADA
+						c=0;								//CONTADOR PARA COMPARAR TAMANHO DA VERIFICA√á√ÇO COM A PALAVRA BUSCADA
 							
-						for(l=0,a=i;l<tamanho;l++,a++){ 	//LA«O PARA VERIFICAR SE A PALAVRA ESTA NA COLUNA
+						for(l=0,a=i;l<tamanho;l++,a++){ 	//LA√áO PARA VERIFICAR SE A PALAVRA ESTA NA COLUNA
 					
 							if (mtx[a][j]==palavras[k][l]){
 								c++;}
@@ -137,12 +137,12 @@ int busca_situa(char mtx[][NUMC],int n,char palavras[][NUMC],FILE *resultados, i
 		}}	
 			
 		if (u==1){													//AQUI VERICAMOS SE A PALAVRA FOI ENCONTRADA
-		printf("\n%s esta no caÁa palavras",palavras[k]);
+		printf("\n%s esta no ca√ßa palavras",palavras[k]);
 		fprintf(resultados,"%s  %s",palavras[k],sim);
 	
 		}
 		else{
-		printf("\n%s N√O esta no caÁa palavras",palavras[k]);
+		printf("\n%s N√ÉO esta no ca√ßa palavras",palavras[k]);
 		fprintf(resultados,"%s  %s",palavras[k],nao);
 		gatilho=1;
 	
@@ -151,7 +151,7 @@ int busca_situa(char mtx[][NUMC],int n,char palavras[][NUMC],FILE *resultados, i
 
 
 	if(gatilho==1){
-	fprintf(resultados,"Resultado esperado para este caso: N√O");}
+	fprintf(resultados,"Resultado esperado para este caso: N√ÉO");}
 	else{
 	fprintf(resultados,"Resultado esperado para este caso: SIM");}
 	fprintf(resultados,"\n\n\n");
