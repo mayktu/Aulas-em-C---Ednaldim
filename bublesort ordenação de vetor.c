@@ -1,17 +1,23 @@
+
+//NOME: Mayk Tulio Bezerra
+//RA: 727953
+//CURSO: CIÊNCIA DA COMPUTAÇÃO
+
+    
 #include<stdio.h>
 #define MAX 1000
 
 int main(){
 
 int i,j,aux,tam,guard = 0;
-int v[MAX];
+int a[MAX];
 
 //ENTRADA DO TAMANHO DO VETOR
 scanf("%d",&tam);
 
 //PREEENCHIMENTO DO VETOR
 for(i=0;i<tam;i++){
-scanf("%d",&v[i]);
+scanf("%d",&a[i]);
 }
 
 //BUBLLESORT DO VETOR
