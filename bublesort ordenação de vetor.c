@@ -1,8 +1,32 @@
+#include<stdio.h>
+#define MAX 1000
 
+int main(){
 
-for (i=1;i<=10;i++)
-	for (j=i+1;j<=10;j++)
-		if (a[i]>a[j])
+int i,j,aux,tam,guard = 0;
+int v[MAX];
+
+//ENTRADA DO TAMANHO DO VETOR
+scanf("%d",&tam);
+
+//PREEENCHIMENTO DO VETOR
+for(i=0;i<tam;i++){
+scanf("%d",&v[i]);
+}
+
+//BUBLLESORT DO VETOR
+for (i=0;i<tam;i++){
+	for (j=i+1;j<tam;j++){
+		if (a[i]>a[j]){
 			aux=a[i];
 			a[i]=a[j];
-			a[j]=aux
+			a[j]=aux;
+			guard++;
+		}
+	}
+}
+
+//SAIDA ESPERADA
+printf("%d\n",guard);	
+return 0;	
+}
